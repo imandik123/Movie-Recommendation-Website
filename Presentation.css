@@ -1,0 +1,90 @@
+@import url('https://fonts.google.com/specimen/Poppins?selection.family=Poppins&sidebar.open=true&preview.text_type=custom');
+body{
+  display: flex;
+}
+
+img{
+  margin:0;
+  padding:0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: -1;
+}
+
+.text {
+  margin-top: 100px;
+  position:fixed;
+  margin-left: 150px;
+
+ }
+ 
+ .text h1 {
+  font-size: 100px;
+  text-align: center;
+  font-weight: bold;
+  -webkit-animation: glow 2s ease-in-out infinite alternate;
+  -moz-animation: glow 2s ease-in-out infinite alternate;
+  animation: glow 2s ease-in-out infinite alternate;
+  justify-content: center;
+  align-items: center;
+}
+ 
+@-webkit-keyframes glow {
+  from {
+  color: rgb(255, 255, 255);
+  text-shadow: 0 0 10px #03e9f4, 0 0 20px #03e9f4, 0 0 30px #03e9f4, 0 0 40px #03e9f4, 0 0 50px #03e9f4, 0 0 60px #03e9f4, 0 0 70px #4c0ce0, 0 0 90px #4c0ce0, 0 0 100px #4c0ce0;
+  }
+   
+  to {
+  color: rgb(102, 101, 101);
+  text-shadow: 0 0 20px #03e9f4, 0 0 30px #03e9f4, 0 0 40px #03e9f4, 0 0 50px #03e9f4, 0 0 60px #03e9f4, 0 0 70px #03e9f4, 0 0 80px #4c0ce0, 0 1 90px #4c0ce0, 0 0 100px #4c0ce0;
+}
+}
+
+.logo{
+  height:150px;
+  width:200px;
+  cursor:pointer;
+}
+ 
+.lift{
+
+  letter-spacing: 1px;
+  color: white;
+}
+
+#Name ul{
+    display: inline-block;
+}
+
+#Name li{
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    font-size: 37px;
+    letter-spacing: 1px;
+    margin-top: 500px;
+    padding:70px;
+}
+
+
+@keyframes glowing {
+    0% {text-shadow:0 0 .3em, 0 0 .3em;}
+    25% {text-shadow:0 0 .3em, 0 0 .6em;}
+    50% {text-shadow:0 0 .6em, 0 0 .3em;}
+    75%{text-shadow: 0 0 .6em, 0 0 .6em;}
+    100%{text-shadow:0 0 .3em, 0 0 .3em;}
+  }
+  @-webkit-keyframes glowing {
+    
+    0% {text-shadow:0 0 .3em, 0 0 .3em;}
+    25% {text-shadow:0 0 .3em, 0 0 .6em;}
+    50% {text-shadow:0 0 .6em, 0 0 .3em;}
+    75%{text-shadow: 0 0 .6em, 0 0 .6em;}
+    100%{text-shadow:0 0 .3em, 0 0 .3em;}
+  }
+
+  .name{color:#03e9f4;animation: glowing 2s infinite;}

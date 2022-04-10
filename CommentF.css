@@ -1,0 +1,214 @@
+@import url(https://fonts.googleapis.com/css?family=Cookie|Raleway:300,700,400);
+/* CSS for comment part */
+*{
+	box-sizing: border-box;
+	font-size: 16px;
+	margin: 0;
+	padding: 0;
+	
+}
+body{
+	position: fixed;
+	background-size: cover;
+	color: #03e9f4;
+	font-size: 18px;
+	font-family: 'Raleway', sans-serif;
+}
+/* setting up the image size */
+/* .background img{
+    height:100px;
+    width:100%;                                  
+} */
+
+.background img{
+	display: cover;
+	width:1537px;
+	height: 760px;
+
+}
+
+
+/* body of the comment form */
+.container{
+	margin-top:50px;
+	border-radius: 8px;
+	box-shadow: 0 0 16px 0 rgba(51,51,51,0.25);
+	display: block;
+	max-width: 480px;
+	overflow: hidden;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	padding: 2em;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	z-index: 1;
+	width: 98%;
+	background: rgba(0, 0, 0, 0.4);
+}
+.container:before{
+	background-size: cover;
+	-webkit-filter: blur(10px);
+	filter: blur(10px);
+	height: 100vh;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	z-index: -1;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+
+}
+/* .container:after{
+	background: rgba(255,255,255,0.6);
+	content: '';
+	display: block;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	width: 100%;
+} */
+
+/* button to submint the form */
+form button.submit{
+	background: rgba(255,255,255,0.25);
+	border: 1px solid #333;
+	line-height: 16px;
+	padding: 8px 8px;
+	-webkit-transition: all 0.25s;
+	transition: all 0.25s;
+}
+
+/* reset button used to reset the form */
+form .reset{
+	background: rgba(255,255,255,0.25);
+	border: 1px solid #333;
+	line-height: 16px;
+	padding:8px 8px; 
+    -webkit-transition: all 0.25s;
+	transition: all 0.25s;
+}
+
+
+form button:hover,form button:focus,form button:active,form button.loading{
+	background: #03e9f4;
+	color: rgb(0, 0, 0);
+}
+
+form .reset:hover,form .reset:focus,form .reset:active,form .reset.loading{
+	background: #03e9f4;
+	color: rgb(0, 0, 0);
+}
+
+form label{
+	border-bottom: 1px solid #333;
+	display: block;
+	font-size: 20px;
+	margin-bottom: 8px;
+	-webkit-transition: all 0.25s;
+	transition: all 0.25s;
+}
+form label.comment{
+	float: left;
+	width: 50%;
+}
+form label.comment:nth-of-type(even){
+	border-left: 1px solid #333;
+	padding-left: 4px;
+}
+form label input{
+	background: none;
+	color:white;
+	border: none;
+	line-height: 16px;
+	font-weight: 300;
+	padding: 2px 4px;
+	width: 100%;
+}
+form label input:focus{
+	outline: none;
+}
+form label input:-webkit-autofill{
+	background-color: transparent;
+}
+
+form label span.text{
+	display: block;
+	font-size: 12px;
+	font-weight: bold;
+	padding-left: 8px;
+	text-transform: uppercase;
+	-webkit-transition: all 0.25s;
+	transition: all 0.25s;
+}
+ form label textarea{
+    background: rgba(255,255,255,0.25);
+    border-style: none;
+ }
+
+h1{
+	font-size: 48px;
+	margin: 0 0 8px 0;
+	text-align: center;
+}
+
+/* adjusting the logo size and margin */
+h1 img{
+	height: auto;
+	margin: 0 auto;
+	max-width: 240px;
+	width: 100%;
+}
+
+.text-center{
+	text-align: center;
+}
+
+
+/* rating star section starts from here */
+.rating {
+	float: left;
+    height: 46px;
+    padding: 0 10px;
+}
+
+.rating:not(:checked)  input {
+    position:absolute;
+    top:-9999px;
+}
+
+.rating:not(:checked)  label {
+	overflow:hidden;
+    float:right;
+	font-size:30px;
+    width:30px;
+    white-space:nowrap;
+    color:rgb(204, 204, 204);
+	cursor:pointer;
+}
+
+.rating:not(:checked)  label:before {
+	/* displaying a star for the sure */
+    content: '★ ';
+}
+/* setting colors before clicking and after hovering on it */
+.rating  input:checked ~ label {
+    color: #ffc700;    
+}
+
+.rating:not(:checked)  label:hover,
+.rating:not(:checked)  label:hover ~ label {
+    color: #deb217;  
+}
+
+.rating  input:checked + label:hover,
+.rating  input:checked + label:hover ~ label,
+.rating  input:checked ~ label:hover,
+.rating  input:checked ~ label:hover ~ label,
+.rating  label:hover ~ input:checked ~ label {
+    color: #c59b08;
+}

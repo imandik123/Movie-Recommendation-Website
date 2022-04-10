@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="CommentF.css">
+    <link rel="icon" href="pics/My  (4).png" type="image/png" >
+
+    <title>Comment Form</title>
+</head>
+<body>
+    <div class="background">
+        <img src="pics/backg1.jpg">
+
+    </div>
+    <div class="container">
+        <!-- link the main page with the logo -->
+        <h1>
+            <a href="http://127.0.0.1:5501/MainPage.html">
+                <img src="pics/logo.png" alt="MovieMe Logo">
+            </a>
+        </h1>
+        <h1 class="text-center">Feedback Page</h1><br>
+        <form class="comment-form" name="myform">
+            <label class="comment">
+                <span class="text">First Name</span>
+                <input type="text" name="firstName" id="fname">
+            </label>
+            <label class="comment">
+                <span class="text">Last Name</span>
+                <input type="text" name="lastName" id="lname">
+            </label>
+            <label>
+                <span class="text">Email</span>
+                <input type="text" name="email" id="email">
+            </label><br>
+            <!-- HTML code for rating -->
+            <label>
+                <span class = "text">Rate</span>
+                <div class="rating">
+                    <!-- using radion buttons for this process -->
+                    <input type="radio" id="star1" name="rate" value="1" /> 
+                    <label for="star1" title="text">1th star</label>
+                    <input type="radio" id="star2" name="rate" value="2" />
+                    <label for="star2" title="text">2nd star</label>
+                    <input type="radio" id="star3" name="rate" value="3" />
+                    <label for="star3" title="text">3rd star</label>
+                    <input type="radio" id="star4" name="rate" value="4" />
+                    <label for="star4" title="text">4th star</label>
+                    <input type="radio" id="star5" name="rate" value="5" />
+                    <label for="star5" title="text"> 5th star</label>
+                  </div>
+            </label><br><br>
+            <label>
+                <span class="text">Comment</span><br>
+                <textarea rows="3" cols="45" name="comment" form="comment" id="comment"></textarea>    
+            </label><br>
+            <!-- reset button and the submint button. -->
+            <div class="text-center">
+                <input class="reset" type="reset" value="Reset">
+                <button class="submit" onClick="myFunction()" name="register">Submit</button>
+            </div>
+            
+        </form>
+        <div class="editor">
+            <a href="sandun.html">Editors Page</a>
+        </div>
+    </div>
+    
+    <!-- Java Script validation part to check whether all the entered data are valid and important fields are filled. -->
+    <script>
+
+        function myFunction() {
+            var x = document.getElementById("fname").value;
+            // checks whether the name is not empty.
+                if (x == "" || x == null) {
+                alert("Name must be filled out");
+                return false;
+            }
+
+            var y = document.getElementById("lname").value;
+            // checks whether the name is not empty.
+                if (y == "" || y == null){
+                alert("Last name must be filled out")
+                return false;
+            }
+
+            var k=document.myform.email.value;  
+            var atposition=k.indexOf("@");  
+            var dotposition=k.lastIndexOf(".");
+            // checks whether the email is not empty and in correct formate.  
+                if (atposition<1 || dotposition<atposition+2 || dotposition+2>=k.length){
+                alert("Please enter a valid e-mail address ");
+                return false;  
+            }  
+
+            var i = document.getElementById("comment").value;
+            // checks whether the comment section is not empty.
+                if (i == "" || i == null) {
+                alert("comment must be filled out");
+                return false;
+            }
+                else{
+                    alert("Dear " + " " + x +" " + y + ", Thank you very much for your feedback. you have commented us. " + " " + 
+                    i + ".")
+                }
+        }
+
+    </script>
+   
+</body>

@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+body{
+    margin: 0;
+    padding: 0;
+    color: white;
+    position: fixed;
+    font-family: 'Poppins', sans-serif;
+}
+
+.box{
+    background: rgba(0,0,0,0.6);
+    width:350px;
+    height:400px;
+    position:absolute;
+    margin-top: -350px;
+    margin-left:250px;
+    transform: translate(-50%,-50%)
+}
+
+.image img{
+    height: 70px;
+    width:70px;
+    border-radius: 50px;
+    position:absolute;
+    top:0%;
+    left:50%;
+    transform: translate(-50%, -50%)
+}
+
+.box h2{
+    text-align: center;
+    margin-top: 50px;
+}
+
+.box2{
+    background: rgba(0,0,0,0.6);
+    width:350px;
+    height:400px;
+    position:absolute;
+    margin-top: -350px;
+    margin-left: 760px;
+    transform: translate(-50%,-50%)
+}
+
+.image img{
+    height: 70px;
+    width:70px;
+    border-radius: 50px;
+    position:absolute;
+    top:0%;
+    left:50%;
+    transform: translate(-50%, -50%)
+}
+
+.box2 h2{
+    text-align: center;
+    margin-top: 50px;
+}
+
+.box3{
+    background: rgba(0,0,0,0.6);
+    width:350px;
+    height:400px;
+    position:absolute;
+    margin-top: -350px;
+    margin-left:1250px;
+    transform: translate(-50%,-50%)
+}
+
+.image img{
+    height: 70px;
+    width:70px;
+    border-radius: 50px;
+    position:absolute;
+    top:0%;
+    left:50%;
+    transform: translate(-50%, -50%)
+}
+
+.box3 h2{
+    text-align: center;
+    margin-top: 50px;
+}
+
+.backimage img{
+    height:760px;
+    width: 1536px;
+}
+
+.heading h1{
+    color: black;
+    margin-top:-120px;
+    text-align: center;
+    font-size:90px;
+    
+}
+
+p{
+
+        margin-left: 10px;
+}
+
+/* button{
+    align-items:center;
+    background: transparent;
+    background-color: white;
+} */
+
+button{
+    margin-left: 125px;
+    background-color: transparent;
+    color: white;
+    padding: 15px;
+    border-radius: 50px;
+    border-color: aqua;
+
+}
+
+button:hover{
+    background: linear-gradient(rgb(8, 59, 136),cyan);
+    color: black;
+}

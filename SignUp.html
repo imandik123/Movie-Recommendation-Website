@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+.
+<head>
+    <link rel="stylesheet" href="SignUp.css">
+    <link rel="icon" href="pics/My  (4).png" type="image/png" >
+
+    <title>SignUp</title>
+    <script>
+        function displayForm(){
+            var text = document.getElementById("name").value;
+            document.getElementById("p1").innerHTML = text;
+        }
+    </script>
+</head>
+
+<body>
+    <img class="background"  src="pics/backg4.jpeg">
+
+    <div class="login">
+        <h2>Sign Up</h2>
+        <a href="MainPage.html"><img class="logo" src="pics/logo.png"></a>
+        <form action=""name="myform">
+            <div class="main">
+                <input type="text" id="fname">
+                <label>Name</label>
+            </div>
+            <div class="main">
+                <input type="password" id="password">
+                <label>Password</label>
+            </div>
+            <div class="main">
+                <input type="text" >
+                <label>Occupation</label>
+            </div>
+            <div class="main">
+                <input type="email" id="email">
+                <label>Email</label>
+            </div>
+            <div class="main">
+                <input type="text" id="age">
+                <label>Age</label>
+            </div>
+             <div class="main">
+                <input type="text" id="gender">
+                <label>Gender</label>
+            </div>  
+            <a   onclick="displayForm()" class="hell" >
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Submit
+            </a>
+            <a  class="hell" href="Preferences.html">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Next Page
+            </a>
+        </form>
+    </div>
+    <script>
+
+        function displayForm() {
+            var x = document.getElementById("fname").value;
+                if (x == "" || x == null) {
+                alert("Name must be filled out");
+                return false;
+            }
+
+            var y = document.getElementById("password").value;
+                if (y =="" || y == null){
+                alert("Password cannot be null or should be greater than 8 characters")
+                return false;
+            }
+            var x=document.myform.email.value;  
+            var atposition=x.indexOf("@");  
+            var dotposition=x.lastIndexOf(".");  
+                if (atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length){
+                alert("Please enter a valid e-mail address ")
+                return false;  
+            }  
+            var k = document.getElementById("age").value;	 
+                if (isNaN(k) || k < 1 || k > 100) {
+                alert("Please enter a valid age")
+                return false;
+                }			 
+            
+
+            // var i = document.getElementById("gender").value;
+            //     if (i != "male" || i != "female" || i != "Male" || i != "Female" || i != "MALE" || i != "FEMALE") {
+            //         alert("should be either male or female");
+            //     return false;
+            //     } 
+                
+              
+            else{
+                    alert("Dear " + " " + x +" " + y + ", Thank you very much for your feedback. you have commented us. " + " " + ".")
+            }
+            
+            
+        }
+
+    </script>
+    
+</body>

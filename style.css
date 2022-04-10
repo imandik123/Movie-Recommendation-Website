@@ -1,0 +1,329 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body,
+button {
+  font-family: "Poppins", sans-serif;
+}
+/* this part is all about background image */
+.container {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #485461;
+  background-image: linear-gradient(135deg, #1f262e 0%,#485461 20%,#1f252b 25%,#485461 60%, #1e242b 74%);
+  overflow-x: hidden;
+  transform-style: preserve-3d;
+}
+/* this upper bar helps to reserve small space from top to create the click me button */
+.upper-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  height: 3rem;
+}
+
+
+.click-btn {
+  /* position calculate 100%-10%/2=45% */
+  height: 3rem;
+  width: 10%;
+  top: 40px;
+  left: 45%;
+  color: white;
+  background-color: transparent;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+}
+
+
+
+/* -----------------------------------------designs oand animation of first layer starts from here--------------------------- */
+.main {
+  position: relative;
+  width: 100%;
+  left: 0;
+  overflow: hidden;
+  transform-origin: left;
+  /* without next code line,the .main element stays flat on the parent
+  ,so it'll not preserve  the 3d transformation*/
+  transform-style: preserve-3d;
+  /* to fix that,adds (transform-style:preserve-3d)to
+   both(.main)element and its parent to make sure te(.main)will preserve 
+   3d-transformation*/
+  transition: 0.5s;
+}
+
+
+/* this gets the picture and main designs first layer */
+header {
+  min-height: 100vh;
+  width: 100%;
+  background: url("offer.jpg") no-repeat top center / cover;
+  position: relative;
+  opacity: 5;
+  text-align: center;
+  z-index: 5;
+  color: white;
+}
+
+.overlayer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(31, 37, 43, 0.8);
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.innerlayer {
+  max-width: 35rem;
+  text-align: center;
+  color: #fff;
+  padding: 0 2rem;
+}
+
+.title {
+  font-size: 2.7rem;
+}
+/* --------------------animation of main layer------------------------------------- */
+.container.active .main {
+  /* animate this when clicking on the button */
+  animation: main-animation 0.5s ease;
+  cursor: pointer;
+  transform: perspective(1300px) rotateY(20deg) translateZ(310px) scale(0.5);
+  /* when th container element has the class ("active"),
+we have to rotate he (".main)element 20degrees. and decrease its size, */
+/* (perspective) here the transform originates from the center,
+so we need to change the origin of the transformation to the left*/
+/* (translatez)define how for the element is away from the user. 
+translateZ(310px) is to pull it towards us by 310px*/
+}
+
+@keyframes main-animation {
+  from {
+    transform: translate(0);
+  }
+
+  to {
+    transform: perspective(1300px) rotateY(20deg) translateZ(310px) scale(0.5);
+  }
+}
+
+/*--------------------------------- designs of items in the list are located on rght ---------------------------------------------------*/
+.list {
+  position: absolute;
+  width: 30%;
+  right: 10%;
+  top: 2%;
+  height: 100vh;
+  z-index: 60;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul {
+  list-style: none;
+}
+/* daraz link */
+.list a {
+  text-decoration: none;
+  color: #eee;
+  padding: 0.7rem 0;
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: 0.3s;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: hide 0.5s forwards ease;
+  border-bottom: 2px solid white;
+}
+
+.list a:hover {
+  color: #fff;
+  font-size: 1.6rem;
+  border-bottom: 4px solid white;
+}
+
+.container.active .list a {
+  animation: appear 0.5s forwards ease var(--i);
+}
+
+
+/* offer reminder */
+.list p {
+  text-decoration: none;
+  color: #eee;
+  padding: 0.7rem 0;
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: 0.3s;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: hide 0.5s forwards ease;
+}
+
+.list p:hover {
+  color: rgb(126, 175, 175);
+  font-size: 1.6rem;
+}
+
+.container.active .list p {
+  animation: appear 0.5s forwards ease var(--i);
+}
+
+/* button */
+.list button {
+  margin-top: 20px;
+  background-color: transparent;
+  text-decoration: none;
+  color: #eee;
+  padding: 0.7rem 0;
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: 0.3s;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: hide 0.5s forwards ease;
+}
+
+.list button:hover {
+  color: rgb(126, 175, 175);
+  font-size: 1.1rem;
+}
+
+.container.active .list button {
+  animation: appear 0.5s forwards ease var(--i);
+}
+
+/* -----------------------------------------about the list is over from here------------------------------------------------------ */
+
+
+
+
+
+
+
+
+
+/* --------------------------------------element and animations about two shadow starts from here---------------------------------- */
+
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes hide {
+  from {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}
+
+.shadow {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  transform-style: preserve-3d;
+  transform-origin: left;
+  transition: 0.5s;
+  background-color: white;
+}
+
+.shadow.one {
+  z-index: -1;
+  opacity: 0.15;
+}
+
+.shadow.two {
+  z-index: -2;
+  opacity: 0.1;
+}
+/* when the container has ("active") class, the 2 layers
+ will have the same styles as the (.main)element except for
+  the translatez()value */
+.container.active .shadow.one {
+  animation: shadow-one 0.6s ease-out;
+  transform: perspective(1300px) rotateY(20deg) translateZ(215px) scale(0.5);
+  /* decrease the translatez() vaue of the first layer
+   to pust it back after main layer */
+}
+
+@keyframes shadow-one {
+  0% {
+    transform: translate(0);
+  }
+
+  5% {
+    transform: perspective(1300px) rotateY(20deg) translateZ(310px) scale(0.5);
+  }
+
+  100% {
+    transform: perspective(1300px) rotateY(20deg) translateZ(215px) scale(0.5);
+  }
+}
+
+.container.active .shadow.two {
+  animation: shadow-two 0.6s ease-out;
+  transform: perspective(1300px) rotateY(20deg) translateZ(120px) scale(0.5);
+  /* decrease the transform value more than 2nd layer */
+}
+
+@keyframes shadow-two {
+  0% {
+    transform: translate(0);
+  }
+
+  20% {
+    transform: perspective(1300px) rotateY(20deg) translateZ(310px) scale(0.5);
+  }
+
+  100% {
+    transform: perspective(1300px) rotateY(20deg) translateZ(120px) scale(0.5);
+  }
+}
+
+.container.active .main:hover + .shadow.one {
+  transform: perspective(1300px) rotateY(20deg) translateZ(230px) scale(0.5);
+}
+/* increase the translatez() value of the (.main) 
+element and the first layer when we hover(.main)element  */
+.container.active .main:hover {
+  transform: perspective(1300px) rotateY(20deg) translateZ(340px) scale(0.5);
+}

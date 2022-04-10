@@ -1,0 +1,517 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+* {
+    box-sizing: border-box;
+
+}
+
+ body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    background-image:linear-gradient(135deg,black 0% ,#2a2d30 50%,#0e1014 74%);
+
+}
+
+
+/* nav bar */
+
+
+
+.header {
+    background-color: rgba(27, 27, 27, 0.6);
+    background-image: url("Images/Header Background.jpg");
+    background-blend-mode: multiply;
+    background-size: cover;
+    padding-bottom: 30px;
+    border-bottom: aqua;
+    opacity: 0.5;
+}
+
+
+/* my store  */
+.name{
+    font-size: large;
+    border-bottom: 1px solid aqua;
+    border-top: 1px solid aqua;
+    margin-top: 25px;
+}
+h1 {
+    text-align: center;
+    margin: 0;
+    font-size: 8em;
+    font-weight: normal;
+    color: white;
+}
+
+/* items*/ 
+.container{
+    text-align: center;
+}
+
+
+.content {
+    font-weight: normal;
+    color: rgb(174, 214, 212);
+    text-align: center;
+    font-size: 2.5em;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+
+
+
+
+.about-band-image {
+    float: left;
+    height: 200px;
+    width: 200px;
+    margin: 15px;
+    border-radius: 50%;
+}
+
+.main-footer {
+    background-color: #1e4755;
+    color: white;
+    padding: .25em 0;
+}
+
+.main-footer-container {
+    display: flex;
+    align-items: center;
+}
+
+.main-footer-container ul {
+    flex-grow: 1;
+    text-align: end;
+}
+
+.footer-nav li {
+    padding: 0 .5em;
+}
+
+.footer-nav img {
+    width: 30px;
+    height: 30px;
+}
+
+.btn {
+    text-align: center;
+    vertical-align: middle;
+    padding: .67em .67em;
+    cursor: pointer;
+}
+
+.btn-header {
+    margin: .5em 15% 2em 15%;
+    color: white;
+    border: 2px solid #2D9CDB;
+    background-color: rgba(255, 255, 255, .1);
+    border-radius: 0;
+    font-size: 1.5em;
+    font-weight: lighter;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+.btn-header:hover {
+    background-color: rgba(255, 255, 255, .3);
+}
+
+.btn-play {
+    display: block;
+    margin: 0 auto;
+    color: #2D9CDB;
+    font-size: 4em;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    padding: 0;
+    text-align: center;
+}
+
+.primary-btn {
+    color: white;
+    background-color: #56CCF2;
+    border: none;
+    border-radius: .3em;
+    font-weight: bold;
+}
+
+.primary-btn:hover {
+    background-color: #2D9CDB;
+}
+
+.tour-row {
+    border-bottom: 1px solid black;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+}
+
+.tour-row:last-child {
+    border: none;
+}
+
+.tour-item {
+    display: inline-block;
+    padding-right: .5em;
+}
+
+.tour-date {
+    color: #555;
+    width: 11%;
+    font-weight: bold;
+}
+
+.tour-city {
+    width: 24%;
+}
+
+.tour-arena {
+    width: 42%;
+}
+
+.tour-btn {
+    max-width: 19%;
+}
+
+
+
+/* 22% *4 + 2%*2 + 1%*8 = 100% width  */
+/* this part of the css code is about items */
+
+.products{
+    margin-left: 2%;
+}
+/* add padding between each column */
+/* product=row , single-product=coloumn */
+.products,
+.products > .single-product{
+    padding:8px;
+}
+
+/* creating four coloumns */
+.single-product{
+    float: left;
+    width: 22%;
+    border:0.1em solid white;
+    margin: 1%;
+}
+
+.products:after{
+    content:"";
+    display:table;
+    clear: both;
+
+}
+/* makes a two column-layout instead of four coloumn */
+@media  screen and (max-midth: 900px) {
+    .single-product{
+        width:50%;
+    }
+    
+}
+/* makes a two columns stack on top of each other instead of next to each other */
+@media  screen and (max-midth: 900px) {
+    .single-product{
+        width:100%;
+    }
+    
+}
+
+.store-title {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 10;
+    color: rgb(170, 226, 226);
+    margin-top:10px;
+    margin-bottom: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.store-image {
+    height: 250px;
+    width: 200px;
+    opacity: 0.5;
+}
+
+.store-details {
+    border: 1px solid white;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.store-price {
+    flex-grow: 1;
+    color: rgb(170, 226, 226);
+}
+
+
+/* below css codes are about the cart */
+/* titles of the table */
+.cart-header {
+    font-weight: bold;
+    font-size: 1.25em;
+    color: rgb(182, 173, 173);
+}
+/* about table */
+.cart-column {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid white;
+    margin-right: 1.5em;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+
+.my-cart-row {
+    display: flex;
+}
+
+.cart-item {
+    width: 45%;
+}
+/* create item designs */
+.cart-price {
+    width: 20%;
+    font-size: 1.2em;
+    color: rgb(182, 173, 173);
+}
+
+.cart-quantity {
+    width: 35%;
+}
+
+.cart-item-title {
+    color: rgb(182, 173, 173);
+    margin-left: .5em;
+    font-size: 1.2em;
+}
+
+.cart-item-image {
+    width: 75px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.btn-danger {
+    color: white;
+    background-color: #EB5757;
+    border: none;
+    border-radius: .3em;
+    font-weight: bold;
+}
+
+.btn-danger:hover {
+    background-color: #CC4C4C;
+}
+
+.cart-quantity-input {
+    height: 34px;
+    width: 50px;
+    border-radius: 5px;
+    border: 1px solid #51badd;
+    background-color: transparent;
+    color: rgb(182, 173, 173);
+    padding: 0;
+    text-align: center;
+    font-size: 1.2em;
+    margin-right: 25px;
+}
+
+.my-cart-row:last-child {
+    border-bottom: 1px solid black;
+}
+
+.my-cart-row:last-child .my-cart-column {
+    border: none;
+}
+
+.my-cart-total {
+    text-align: end;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.my-cart-total-title {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: rgb(126, 118, 118);
+    margin-right: 20px;
+}
+
+.my-cart-total-price {
+    color: rgb(126, 118, 118);
+    font-size: 1.1em;
+}
+/* purchase button */
+.btn-purchase {
+    display: block;
+    width: 15%;
+    margin-left: 42.5%;
+    margin-top: 20px;
+    font-size: 1.75em;
+    border: 1px solid aqua;
+    background-image:linear-gradient(135deg,black 0% ,#3a3f42 50%,#0e1014 74%);
+}
+.btn-purchase:hover{
+    background-color: transparent;
+    border: 3px solid aqua;
+}
+
+
+
+#demo{
+    background-color: transparent;
+    text-align: center;
+    color: rgb(126, 118, 118);
+
+}
+.font-size {
+    display: block;
+    font-size: 20px;
+    color: rgb(126, 118, 118);
+    background-image: linear-gradient(135deg,black 0% ,#3a3f42 50%,#0e1014 74%);
+    padding: 15px 15px;
+    background-color: transparent;
+    border: 2px solid rgb(92, 134, 132);
+    width: 15%;
+    margin-left: 42.69%;
+    text-align: center;
+    margin-bottom: 50px;
+    border-radius: 5;
+
+}
+
+.logo img{
+    width:200px;
+}
+
+nav {
+    border: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    top: 0;
+}
+
+.logo-img{
+    float: left;
+    width:200px;
+    height:auto;
+    position: relative;
+    margin-top: 10px;
+    margin-left: -150px;
+    cursor:pointer;
+  
+  }
+  
+  
+  #navbar {
+      font-family:  Helvetica;
+      font-weight: 700;
+      position: absolute;
+      height: 65px;
+      line-height: 60px;
+      width: 99%;
+   
+  }
+    
+  .navb {
+      margin:auto;
+      text-align: center;
+      width: 70%;
+  } 
+  
+  @media(max-width: 768px) {
+        .navb {
+          width: 90%;
+        }
+  } @media(max-width: 638px) {
+          .navb {
+            width: 100%;
+          }
+  } 
+    
+    
+  
+  #navbar ul {
+      display: inline-block;
+      float: right;
+      list-style: none;
+      margin-top: 30px;
+      text-align: right;
+      margin-right: -180px;
+      font-size:20px;
+      transition: transform 0.5s ease-out;
+      -webkit-transition: transform 0.5s ease-out;
+  } 
+  @media(max-width: 640px) {
+        #navbar ul {
+          display: none;
+        }
+  } 
+  @media(orientation: landscape) {
+          #navbar ul {
+            display: inline-block;
+          }
+  }
+    
+  #navbar li {
+      display: inline-block;
+  }
+    
+  #navbar li a {
+      color: rgb(255, 255, 255);
+      display: block;
+      font-size: 17px;
+      height: 50px;
+      letter-spacing: 1px;
+      margin: 0 20px;
+      padding: 0 4px;
+      position: relative;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: all 0.5s ease;
+      -webkit-transition: all 0.5s ease;
+  }
+    
+  #navbar li a:hover {
+      color:  #03e9f4;
+  }
+    
+  
+  #navbar li a:before, #navbar li a:after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 3.5px;
+      bottom: -1px;
+      background:  #03e9f4;
+  }
+    
+  #navbar li a:before {
+      left: 0;
+      transition: 0.5s;
+  }
+    
+  #navbar li a:after {
+      background: rgb(255, 255, 255);
+      right: 0;
+  
+  }
+    
+  #navbar li a:hover:before {
+      background: rgb(255, 255, 255);
+      width: 100%;
+      transition: width 0.5s cubic-bezier((0.22, 0.61, 0.36, 1));
+  }
+    
+  #navbar li a:hover:after {
+      background: transparent;
+      width: 100%;
+  
+  }

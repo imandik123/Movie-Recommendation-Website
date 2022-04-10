@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+
+}
+body
+{
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.wrapper
+{
+    background-color: black;
+    width: 500px;
+    padding: 25px;
+    margin: 25px auto 0;
+    box-shadow: 0px 0px 20px aqua;
+}
+.wrapper h2
+{
+    background-color: black;
+    color: aqua;
+    font-size: 24px;
+    padding: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    border: 1px solid aqua;
+}
+h4{
+    padding-bottom: 5px;
+    color: aqua;
+}
+.input-group{
+    margin-bottom: 8px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    padding: 5px 0;
+}
+.input-box{
+    width: 100%;
+    margin-right: 12px;
+    position: relative;
+}
+.input-box:last-child{
+    margin-right: 0;
+}
+.name{
+    padding: 14px 10px 14px 50px;
+    width: 100%;
+    background-color: black;
+    border: 1px solid #c0bfbf;
+    outline: none;
+    letter-spacing: 1px;
+    transition: 0.3s;
+    border-radius: 3px;
+    color: rgb(224, 224, 224);
+}
+.name:focus, .dob:focus{
+    -webkit-box-shadow:0 0 2px 1px aqua;
+    -moz-box-shadow:0 0 2px 1px aqua;
+    box-shadow: 0 0 2px 1px aqua;
+    border: 1px solid aqua;
+
+}
+.input-box .icon{
+    width: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    color: #333; 
+    background-color: black; 
+    border-radius: 2px 0 0 2px;
+    transition: .0.3px;
+    font-size: 20px;
+    pointer-events: none;
+    border: 1px solid #c0bfbf;
+    border-right: none;
+}
+.name:focus + .icon{
+    background-color: aqua;
+    color: black;
+    border-right: 1px solid aqua;
+    border: none;
+    transition: 1s;
+}
+.dob{
+    width: 30%;
+    padding: 14px;
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    transition: 0.3s;
+    outline: none;
+    border: 1px solid #c0bfbf;
+    border-radius: 3px;
+    color:aliceblue;
+}
+.radio{
+    display: none;
+}
+.input-box label{
+    width: 50%;
+    padding: 13px;
+    background-color: black;
+    display: inline-block;
+    float: left;
+    text-align: center;
+    color: #c0bfbf;
+    border:1px solid #c0bfbf; 
+}
+.input-box label:first-of-type{
+    border-top-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-right: none;
+}
+.input-box label:last-of-type{
+    border-top-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+.radio:checked + label{
+    background-color: aqua;
+    color: black;
+    transition: 0.5s;
+}
+.input-box select{
+    display: inline-block;
+    width: 50%;
+    padding: 12px;
+    color: #c0bfbf;
+    background-color: black;
+    float: left;
+    text-align: center;
+    font-size: 16px;
+    outline: none;
+    border: 1px solid #c0bfbf;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.input-box select:focus{
+    background-color: aqua;
+    color: #c0bfbf;
+    text-align: center;
+}
+button{
+    width: 100%;
+    background: transparent;
+    border: none;
+    background: aqua;
+    color: black;
+    padding: 15px;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: all 0.35s ease;
+}
+button:hover{
+    cursor: pointer;
+    background: aqua;
+}
+
